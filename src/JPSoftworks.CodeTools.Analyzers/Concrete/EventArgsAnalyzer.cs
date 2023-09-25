@@ -22,7 +22,7 @@ namespace JPSoftworks.CodeTools.Analyzers;
 [UsedImplicitly(ImplicitUseKindFlags.InstantiatedWithFixedConstructorSignature)]
 public class EventArgsAnalyzer : DiagnosticAnalyzer
 {
-    private const string Category = WellKnownCategories.Design;
+    private const string Category = WellKnownCategories.Usage;
 
     private static readonly LocalizableString Title = new LocalizableResourceString(nameof(Resources.EventArgsAnalyzerTitle), Resources.ResourceManager!, typeof(Resources));
     private static readonly LocalizableString MessageFormat = new LocalizableResourceString(nameof(Resources.EventArgsAnalyzerMessageFormat), Resources.ResourceManager, typeof(Resources));
