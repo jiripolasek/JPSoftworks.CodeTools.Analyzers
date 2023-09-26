@@ -14,10 +14,11 @@ Collection of Roslyn analyzers used in various projects, generalized for re-use 
 ## Wishlist
 | Rule ID                         | Description                                                                      | Category | Severity  | Status | Notes |
 | ------------------------------- | -------------------------------------------------------------------------------- | -------- | :-------- | :----: | ----- |
-| [JPX0005](doc/rules/JPX0005.md) | Use EventHandler delegate for events.                                            | Design   | ⚠️ Warning |   💡    |       |
-| [JPX0006](doc/rules/JPX0006.md) | Use correct sender in event invocation (`this` for instance, `null` for static). | Usage    | ⚠️ Warning |   💡    |       |
-| [JPX0007](doc/rules/JPX0007.md) | Shouldn't call `Type.GetType()`, probably meant GetType() on object instance.    | Usage    | ⚠️ Warning |   💡    |       |
-| [JPX0008](doc/rules/JPX0008.md) | Shouldn't return null from async method.                                         | Usage    | ⚠️ Warning |   💡    |       |
+| [JPX0005](doc/rules/JPX0005.md) | Use `EventHandler` delegate for events.                                          | Design   | ⚠️ Warning |   💡    |       |
+| [JPX0006](doc/rules/JPX0006.md) | Use `EventArgs.Empty` instead of `null`.                                         | Design   | ⚠️ Warning |   💡    |       |
+| [JPX0007](doc/rules/JPX0007.md) | Use correct sender in event invocation (`this` for instance, `null` for static). | Usage    | ⚠️ Warning |   💡    |       |
+| [JPX0008](doc/rules/JPX0008.md) | Shouldn't call `Type.GetType()`, probably meant GetType() on object instance.    | Usage    | ⚠️ Warning |   💡    |       |
+| [JPX0009](doc/rules/JPX0009.md) | Shouldn't return null from async method.                                         | Usage    | ⚠️ Warning |   💡    |       |
 | [JPX0021](doc/rules/JPX0021.md) | Use String.Equals instead of == operator.                                        | Usage    | ⚠️ Warning |   💡    |       |
 | [JPX0022](doc/rules/JPX0022.md) | Use String.Equals instead of String.Compare(...) == 0.                           | Usage    | ⚠️ Warning |   💡    |       |
 | [JPX0023](doc/rules/JPX0023.md) | Specify case comparison explicitly when comparing strings.                       | Usage    | ⚠️ Warning |   💡    |       |
