@@ -29,7 +29,7 @@ public class EnforcedSuffixAnalyzer : DiagnosticAnalyzer
     private static readonly LocalizableString MessageFormat = Resources.EnforcedSuffixAnalyzer_MessageFormat;
     private static readonly LocalizableString Description = Resources.EnforcedSuffixAnalyzer_Description;
 
-    private const string Category = WellKnownCategories.Design;
+    private const string Category = WellKnownCategories.Naming;
     public const string RequiredSuffixPropertyKey = "RequiredSuffix";
 
     private static readonly DiagnosticDescriptor Rule = new(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, true, Description);
