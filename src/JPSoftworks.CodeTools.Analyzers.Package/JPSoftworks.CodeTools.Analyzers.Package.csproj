@@ -8,23 +8,44 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <Title>JPSoftworks .NET Analyzers</Title>
     <PackageId>JPSoftworks.CodeTools.Analyzers</PackageId>
-    <PackageVersion>1.0.0.0-alpha</PackageVersion>
     <Authors>Jiří Polášek</Authors>
-    <PackageLicenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</PackageLicenseUrl>
-    <PackageProjectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</PackageProjectUrl>
-    <PackageIconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</PackageIconUrl>
-    <RepositoryUrl>http://REPOSITORY_URL_HERE_OR_DELETE_THIS_LINE</RepositoryUrl>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Description>JPSoftworks.CodeTools.Analyzers</Description>
+    <PackageProjectUrl>https://github.com/jiripolasek/JPSoftworks.CodeTools.Analyzers</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jiripolasek/JPSoftworks.CodeTools.Analyzers</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Description>Collection of Roslyn analyzers used in various projects, generalized for re-use in generic projects.</Description>
     <PackageReleaseNotes>Initial release of tools I've used across different projects.</PackageReleaseNotes>
-    <Copyright>Copyright</Copyright>
-    <PackageTags>JPSoftworks.CodeTools.Analyzers, analyzers</PackageTags>
+    <Copyright>(c) 2023 Jiří Polášek</Copyright>
+    <PackageTags>analyzers, code fixes</PackageTags>
     <DevelopmentDependency>true</DevelopmentDependency>
     <NoPackageAnalysis>true</NoPackageAnalysis>
-
     <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_AddAnalyzersToOutput</TargetsForTfmSpecificContentInPackage>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="icon.png" Condition=" '$(VersionSuffix)' == '' ">
+      <Pack>True</Pack>
+      <PackagePath>\icon.png</PackagePath>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Include="icon-dev.png" Condition=" '$(VersionSuffix)' != '' ">
+      <Pack>True</Pack>
+      <PackagePath>\icon.png</PackagePath>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\JPSoftworks.CodeTools.Analyzers.CodeFixes\JPSoftworks.CodeTools.Analyzers.CodeFixes.csproj" />
